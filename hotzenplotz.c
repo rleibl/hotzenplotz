@@ -10,7 +10,7 @@ int hamming_distance(unsigned x, unsigned y)
     return __builtin_popcount(x ^ y);
 }
 
-void compare_word(const char* a, const char* b) {
+void hamming_distance_word(const char* a, const char* b) {
 
 	int l = strlen(a);
 
@@ -48,7 +48,7 @@ int main() {
 		// remove it
 		word[ strlen(word)-1 ] = '\0';
 
-		compare_word(hotzenplotz, word);
+		hamming_distance_word(hotzenplotz, word);
 	}
 
 	fclose(fp);
